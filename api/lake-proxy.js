@@ -8,6 +8,6 @@ module.exports = async (req, res) => {
 		res.setHeader('Content-Type', 'text/html; charset=utf-8');
 		res.status(200).send(txt);
 	} catch (e) {
-		res.status(502).json({ error: 'fetch_failed', detail: e.message || String(e) });
+		res.status(502).json({ error: 'fetch_failed', detail: e?.message || String(e) });
 	}
 };
